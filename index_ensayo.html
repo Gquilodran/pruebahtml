@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!--interpretado de manera correcta-->
+<html> <!--etiqueta raiz-->
+<head> <!---->
+    <title>Hola</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Holaa Dani
+    </h1>
+    <p>Esta es mi primera web... ahora que?</p>
+    <hr>
+    <p>y el pico? YIIIIAAA</p>
+    <hr>
+    <!-- lista no ordenada-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <!--Lista ordenada-->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>
+            <ol>
+                <li style="list-style-type: lower-alpha;">subelemento1</li>
+                <li style="list-style-type: lower-alpha;">subelemento2</li>
+                <li style="list-style-type: lower-alpha;">subelemento3</li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+    <table style="width: 500px;">
+        <thead>
+             <tr>
+            <th>Producro</th> <!--Titulos de cabezera de las tablas-->
+            <th>Precio</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Hola</td>
+            <td>Gratis</td> <!--Valores de cada celda-->
+        </tr>
+        <tr>
+            <td>Chancho</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>Chancho feliz muy feliz</td>
+            <td>$20.000</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: $21.000</td>
+        </tfoot>
+    </table>
+
+
+
+    <hr>
+    <!--accion="/formulario" method="post"-->
+    <form>
+        <label for="nombre">Nombre</label>
+        <input value="Gonzalo" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"/><br>
+        <label for="contraseña">Contrasena</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su clave"/>
+        <br>
+        <textarea cols="15" rows="10"id="comentario" placeholder="comentario" name="comentario">Este es un valor por defecto</textarea>
+        <br>
+        <button type="button"> Boton</button>
+        <button type="reset">reset</button>
+        <button type="submit">submit</button>
+    </form>
+    <hr>
+    <p>Este texto es <span style="color:red">más largo</span> para probar la etiqueta de span,
+        marca de forma silenciosa <br> <!--salto de linea--> pero con css marca de color</p>
+    <!--etiqueta de hipervinculo-->
+    <a href="https://www.google.cl">Ir a google</a><br>
+    <a target="_blank" href="https://www.google.cl">Ir a google2</a>
+    <hr>
+    <img src="assets/R.png" width="400"/>
+    <a href="block.html">Ir a la otra pagina</a>
+    
+</body>
+</html>
