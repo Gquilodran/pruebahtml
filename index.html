@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad RAS x WIE 2026</title>
     <style>
-        /* Eliminamos los márgenes por defecto y aseguramos que ocupe todo el alto */
+       
         body, html {
             margin: 0;
             padding: 0;
@@ -16,27 +16,26 @@
             background: linear-gradient(135deg, #78288c 0%, #200529 100%);
         }    
 
-        /* AGREGADO: Estilos esenciales para que el preloader tape toda la pantalla */
+       
         #preloader {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #17031f; /* Fondo oscuro consistente con tu paleta */
+            background-color: #17031f; 
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999; /* Asegura que se posicione por encima de todo */
+            z-index: 9999; 
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
-        /* AGREGADO: Contenedor para ordenar verticalmente los logos y la tarjeta */
         .interfaz-principal {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px; /* Espacio entre los logos y la tarjeta */
+            gap: 25px; 
             width: 90%;
             max-width: 650px;
         }
@@ -68,7 +67,6 @@
             font-size: 2.5rem;
         }
 
-        /* Corrección para que no afecte a las líneas de la terminal */
         .contenedor p {
             margin: 10px 0;
             opacity: 0.8;
@@ -78,16 +76,16 @@
         .terminal {
             font-family: 'Courier New', Courier, monospace;
             text-align: left;
-            background: rgba(0, 0, 0, 0.8); /* Un poco más oscuro para mejor contraste */
+            background: rgba(0, 0, 0, 0.8); 
             padding: 25px;
             border-radius: 8px;
-            border: 1px solid rgba(0, 255, 204, 0.3); /* Borde cian sutil */
+            border: 1px solid rgba(0, 255, 204, 0.3);
             width: 85%;
             max-width: 450px;
             box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
         }
 
-        /* Estilo para las líneas de la terminal */
+ 
         .terminal p {
             margin: 12px 0;
             font-size: 0.95rem;
@@ -109,9 +107,8 @@
             to { opacity: 1; }
         }
         body, html {
-            /* ... (tus otros estilos de body) ... */
-            flex-direction: column; /* Cambia a columna para que el footer vaya abajo */
-            justify-content: space-between; /* Empuja el contenido arriba y el footer al extremo inferior */
+            flex-direction: column; 
+            justify-content: space-between; 
         }
 
         footer {
@@ -164,6 +161,7 @@
     <footer>
         <a href="secreto.html" style="color:  #78288c; ; text-decoration: none; font-weight: bold;">secreto</a> 
     </footer>
+
 
 
     <script>
