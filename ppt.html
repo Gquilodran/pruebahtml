@@ -80,21 +80,214 @@
                 <h2>¿Qué aprenderemos hoy?</h2>
                 <ul>
                     <li>Control de versiones con Git</li>
-                    <li>Maquetación en HTML5 y CSS3</li>
+                    <li>Maquetación en HTML y algo de CSS</li>
                 </ul>
             </section>
 
+            <!--Slayer 1-->
             <section>
                 <section>
                     <h2>Módulo 1: Git & GitHub</h2>
+                    <p>El estándar en control de versiones</p>
                 </section>
                 <section>
-                    <h3>Terminologia importante</h3>
+                    <h2>¿Qué es Git?</h2>
+                    <p>Es un sistema de **control de versiones** de código. Permite determinar puntos de guardado distribuidos a lo largo del desarrollo.</p>
+                </section>
+                <section>
+                    <h2>¿Por qué usar Git?</h2>
+                    <ul>
+                        <li>Permite guardar y retroceder el estado del código a un punto anterior (**Commit**).</li>
+                        <li>Facilita el trabajo colaborativo en paralelo mediante ramas (**Branches**).</li>
+                        <li>Gracias a <a href="https://github.com/" target="_blank">GitHub</a>, puedes respaldar tus repositorios de forma remota y segura.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Preparación</h2>
+                    <p>Asegúrate de tener instalados tus entornos de trabajo:</p>
+                    <p><a href="#" style="color: #00ffcc;">Link tutorial de Descarga para VSCode y Git</a></p>
+                    <p>Además, es un requisito obligatorio crearse una cuenta en **GitHub** para las prácticas.</p>
                 </section>
             </section>
 
             <section>
-                <h2>¡Comencemos!</h2>
+                <section>
+                    <h2>Comandos Principales</h2>
+                    <p>Trabajaremos directamente desde la terminal de <strong>Git Bash</strong></p>
+                </section>
+                
+                <section>
+                    <h2>Configuración Básica</h2>
+                    <p>Establece tu identidad global en la máquina:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git config --global user.name "Tu_Usuario"
+                    $ git config --global user.email correo@ejemplo.com
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Inicio y Clonación</h2>
+                    <p>Inicializar un repositorio local en la carpeta actual:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git init
+                    </code></pre>
+                    <br>
+                    <p>Clonar un repositorio remoto existente:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git clone &lt;url&gt;
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Flujo de Trabajo diario</h2>
+                    <p>Gestión y confirmación de cambios locales</p>
+                </section>
+                
+                <section>
+                    <h2>Ciclo Básico de un Cambio</h2>
+                    <p>Ver el estado actual de los archivos (modificados o nuevos):</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git status
+                    </code></pre>
+                    <p>Añadir los archivos modificados al área de preparación (Staging Area):</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git add .
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Confirmación y Envío</h2>
+                    <p>Confirmar los cambios en el historial local con un mensaje descriptivo:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git commit -m "Mensaje descriptivo del commit"
+                    </code></pre>
+                    <p>Subir tus commits locales a la rama remota correspondiente:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git push origin main
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Actualización remota</h2>
+                    <p>Traer y fusionar los cambios más recientes del servidor a tu copia local:</p>
+                    <pre><code class="language-bash" data-trim>
+                    $ git pull origin &lt;nombre_rama&gt;
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Historial e Inspección</h2>
+                    <p>Ver cómo ha evolucionado el repositorio</p>
+                </section>
+
+                <section>
+                    <h2>Inspeccionar Commits</h2>
+                    <p>Mostrar el historial completo de commits:</p>
+                    <pre><code class="language-bash">
+                    $ git log
+                    </code></pre>
+                    <p>Historial simplificado en una línea y con gráfico de ramas:</p>
+                    <pre><code class="language-bash">
+                    $ git log --oneline --graph
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Ver diferencias</h2>
+                    <p>Ver las modificaciones específicas realizadas en los archivos antes de confirmar:</p>
+                    <pre><code class="language-bash">
+                    $ git diff
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>El código ya no funciona :( ¿Que hago?</h2>
+                    <p><strong>Opción A:</strong> Volver atrás sin borrar el historial (Crea un nuevo commit que deshace los cambios del commit indicado):</p>
+                    <pre><code class="language-bash">
+                    $ git revert &lt;id_commit&gt;
+                    </code></pre>
+                </section>
+                <section>
+                    <p><strong>Opción B:</strong> Volver atrás borrando de raíz (Mueve el estado actual al commit indicado, eliminando los commits posteriores):</p>
+                    <pre><code class="language-bash">
+                    $ git reset --hard &lt;id_commit&gt;
+                    </code></pre>
+                    <p style="color: #ff5555; font-size: 0.8rem;"> El reset '--hard' destruye los cambios no guardados de forma permanente.</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Gestión de Ramas (Branches)</h2>
+                    <p>Trabajando en múltiples características en paralelo</p>
+                </section>
+
+                <section>
+                    <h2>Comandos de Ramas</h2>
+                    <p>Listar todas las ramas locales existentes:</p>
+                    <pre><code class="language-bash">
+                    $ git branch
+                    </code></pre>
+                    <p>Crear una nueva rama independiente:</p>
+                    <pre><code class="language-bash">
+                    $ git branch &lt;nombre_rama&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Navegación y Fusión</h2>
+                    <p>Cambiar tu espacio de trabajo a la rama especificada:</p>
+                    <pre><code class="language-bash">
+                    $ git checkout &lt;nombre_rama&gt;
+                    </code></pre>
+                    <p>Fusionar una rama específica con tu rama activa actual:</p>
+                    <pre><code class="language-bash">
+                    $ git merge &lt;nombre_rama&gt;
+                    </code></pre>
+                </section>
+                
+                <section>
+                    <h2>Conexión de Repositorios Remotos</h2>
+                    <p>Vincular un repositorio local a un servidor remoto por primera vez:</p>
+                    <pre><code class="language-bash">
+                    $ git remote add origin &lt;url&gt;
+                    </code></pre>
+                    <p>Listar los alias remotos configurados junto con sus URLs de conexión:</p>
+                    <pre><code class="language-bash">
+                    $ git remote -v
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Algunas buenas practicas de los commits</h2>
+                    <p>Para poder organizarce bien, es recomendable seguir unas reglas con los commits</p>
+                </section>
+                <section>
+                    <h2>Iniciarlos con un verbo:</h2>
+                    <ul>
+                        <li>feat: Nueva caracteristica</li>
+                        <li>fix: bug areglado</li>
+                        <li>perf: mejora de rendimiendo</li>
+                        <li>docs: Cambio en la documentación</li>
+                        <li>refactor: Refactorización del código</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Otras cositas más:</h2>
+                    <ul>
+                        <li>No usar puntos finales o suspensivos</li>
+                        <li>Crear commits cortos y consisos</li>
+                        <li>Referenciar issues y pull requests</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2>Ahora si, empecemos con HTML</h2>
                 <a href="index.html" style="color: #00ffcc;">Ir a la página de prueba</a>
             </section>
 
